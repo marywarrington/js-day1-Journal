@@ -1,4 +1,4 @@
-// var moment = require('moment');
+var moment = require('moment');
 var journal = require('./../js/Journal.js').Journal;
 
 $(document).ready(function(){
@@ -13,6 +13,6 @@ $(document).ready(function(){
     $('#posts').append("<li>" + newJournalEntry.author + "</li>");
     $('#posts').append("<li>" + newJournalEntry.entry + "</li>");
     $('#posts').append("<li>Word Count: " + newJournalEntry.entryLength() + "</li>");
-
+    $('#posts').append("<li>" + moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + "</li>");
   });
 });
