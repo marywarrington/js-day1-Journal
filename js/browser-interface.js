@@ -7,11 +7,12 @@ $(document).ready(function(){
     var title = $('#title').val();
     var author = $('#author').val();
     var entry = $('#body').val();
-    var newJournalEntry = new journal(title, author, entry);
+    var newJournalEntry = new journal (title, author, entry);
 
     $('#posts').append("<li>" + newJournalEntry.title + "</li>");
     $('#posts').append("<li>" + newJournalEntry.author + "</li>");
     $('#posts').append("<li>" + newJournalEntry.entry + "</li>");
+    $('#posts').append("<li>Word Count: " + newJournalEntry.entryLength() + "</li>");
 
   });
 });
