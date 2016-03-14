@@ -8,6 +8,8 @@ $(document).ready(function(){
     var body = $('#body').val();
 
     $('#posts').append("<li>" + title + "</li>");
+    $('#posts').append("<li>" + author + "</li>");
+    $('#posts').append("<li>" + body + "</li>");
 
   });
 });
