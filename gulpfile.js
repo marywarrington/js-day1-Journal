@@ -49,3 +49,5 @@ gulp.task('jshint', function(){
 gulp.task('watch', function(){
   gulp.watch('js/*.js', ['jshint', 'build']);
 });
+
+gulp.task('default', ['jshint', 'build', 'watch']);

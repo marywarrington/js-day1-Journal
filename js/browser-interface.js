@@ -1,12 +1,13 @@
-var pingPong = require('./../js/ping-pong.js').pingPong;
+var journalPost = require('./../js/journal.js').journalPost;
 
 $(document).ready(function(){
-  $('#ping-pong').submit(function(event){
+  $('#journal-form').submit(function(event){
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element){
-      $('#solution').append("<li>" + element + "</li>");
-    });
+    var title = $('#title').val();
+    var author = $('#author').val();
+    var body = $('#body').val();
+
+    $('#posts').append("<li>" + title + "</li>");
+
   });
 });
