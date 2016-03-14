@@ -1,5 +1,6 @@
 var moment = require('moment');
-var journal = require('./../js/Journal.js').Journal;
+// var rando = require('./../js/Journal.js').Journal;
+var OurModule = require('./../js/Journal.js');
 
 $(document).ready(function(){
   $('#journal-form').submit(function(event){
@@ -7,7 +8,8 @@ $(document).ready(function(){
     var title = $('#title').val();
     var author = $('#author').val();
     var entry = $('#body').val();
-    var newJournalEntry = new journal (title, author, entry);
+    // var newJournalEntry = new rando (title, author, entry);
+    var newJournalEntry = new OurModule.Journal (title, author, entry);
 
     $('#posts').append("<li>" + newJournalEntry.title + "</li>");
     $('#posts').append("<li>" + newJournalEntry.author + "</li>");
